@@ -120,6 +120,21 @@ ul {
 }
 .site-nav .link.current {
   color: var(--text-accent);
+  display: block;
+  position: relative;
+}
+
+.site-nav .link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-accent);
+  border-radius: 2px;
 }
 
 /* =====================END NAVIGATION=============== */
