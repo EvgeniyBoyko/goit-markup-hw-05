@@ -747,7 +747,8 @@ ul {
   line-height: 1.87;
 }
 
-.filter-link:hover .portfolio-opacity-text {
+.filter-link:hover .portfolio-opacity-text,
+.filter-link:focus .portfolio-opacity-text {
   opacity: 1;
 }
 
