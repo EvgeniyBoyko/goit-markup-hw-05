@@ -110,7 +110,7 @@ ul {
 
 .site-nav .link {
   display: block;
-  padding: 30px 0;
+  padding: 32px 0;
 
   color: var(--text-black-color);
   font-weight: 500;
@@ -220,6 +220,9 @@ ul {
   letter-spacing: 0.06em;
   background-color: var(--text-accent);
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* .hero-page .hero-btn:focus,
@@ -710,17 +713,35 @@ ul {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: border 250ms var(--cubic);
 }
 
 .icon-exit {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
+
+  transition: fill 250ms var(--cubic);
 }
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.backdrop-btn:focus,
+.backdrop-btn:hover {
+  border: 1px solid var(--text-accent);
+}
+
+.backdrop-btn:focus .icon-exit,
+.backdrop-btn:hover .icon-exit {
+  fill: var(--text-accent);
 }
 
 /* ========== END Modal =============== */
