@@ -483,7 +483,7 @@ ul {
   display: flex;
   width: 44px;
   height: 44px;
-  background-color: #2196f3;
+  background-color: var(--text-accent);
   border-radius: 50%;
 }
 
@@ -533,14 +533,10 @@ ul {
 
 .clients-item {
   display: flex;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   justify-content: center;
   align-items: center;
   margin-left: 30px;
   flex-basis: calc((100% - 30px * 6) / 6);
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-img {
@@ -559,17 +555,20 @@ ul {
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms var(--cubic);
 }
 
 .clients-link:hover,
 .clients-link:focus {
+  border-radius: 4px;
   border: 1px solid var(--text-accent);
 }
 
-.clients-item:hover .clients-logo,
-.clients-item:focus .clients-logo {
+.clients-link:hover .clients-logo,
+.clients-link:focus .clients-logo {
   fill: var(--text-accent);
 }
 
@@ -655,7 +654,7 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .soshial-link {
@@ -664,6 +663,9 @@ ul {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soshial-link .icon {
@@ -672,8 +674,8 @@ ul {
   fill: var(--text-wite-color);
 }
 
-.soshial-link-item:hover,
-.soshial-link-item:focus {
+.soshial-link:hover,
+.soshial-link:focus {
   display: flex;
   width: 44px;
   height: 44px;
